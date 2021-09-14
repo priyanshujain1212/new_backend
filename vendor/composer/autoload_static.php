@@ -1895,6 +1895,7 @@ class ComposerStaticInit069a1f72ecf2824ead8eb08637570c7c
         'Facade\\Ignition\\Support\\LaravelVersion' => __DIR__ . '/..' . '/facade/ignition/src/Support/LaravelVersion.php',
         'Facade\\Ignition\\Support\\Packagist\\Package' => __DIR__ . '/..' . '/facade/ignition/src/Support/Packagist/Package.php',
         'Facade\\Ignition\\Support\\Packagist\\Packagist' => __DIR__ . '/..' . '/facade/ignition/src/Support/Packagist/Packagist.php',
+        'Facade\\Ignition\\Support\\SentReports' => __DIR__ . '/..' . '/facade/ignition/src/Support/SentReports.php',
         'Facade\\Ignition\\Support\\StringComparator' => __DIR__ . '/..' . '/facade/ignition/src/Support/StringComparator.php',
         'Facade\\Ignition\\Tabs\\Tab' => __DIR__ . '/..' . '/facade/ignition/src/Tabs/Tab.php',
         'Facade\\Ignition\\Views\\Compilers\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/facade/ignition/src/Views/Compilers/BladeSourceMapCompiler.php',

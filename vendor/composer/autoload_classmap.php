@@ -1187,6 +1187,7 @@ return array(
     'Facade\\Ignition\\Support\\LaravelVersion' => $vendorDir . '/facade/ignition/src/Support/LaravelVersion.php',
     'Facade\\Ignition\\Support\\Packagist\\Package' => $vendorDir . '/facade/ignition/src/Support/Packagist/Package.php',
     'Facade\\Ignition\\Support\\Packagist\\Packagist' => $vendorDir . '/facade/ignition/src/Support/Packagist/Packagist.php',
+    'Facade\\Ignition\\Support\\SentReports' => $vendorDir . '/facade/ignition/src/Support/SentReports.php',
     'Facade\\Ignition\\Support\\StringComparator' => $vendorDir . '/facade/ignition/src/Support/StringComparator.php',
     'Facade\\Ignition\\Tabs\\Tab' => $vendorDir . '/facade/ignition/src/Tabs/Tab.php',
     'Facade\\Ignition\\Views\\Compilers\\BladeSourceMapCompiler' => $vendorDir . '/facade/ignition/src/Views/Compilers/BladeSourceMapCompiler.php',

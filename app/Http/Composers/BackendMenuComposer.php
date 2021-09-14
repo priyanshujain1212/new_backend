@@ -71,7 +71,7 @@ class BackendMenuComposer
             if (isset($node['child'])) {
                 $f          = 1;
                 $childArray = collect($node['child'])->pluck('link')->toArray();
-                    
+
                 $segmentLink = Request::segment(2);
 
                 if (in_array($segmentLink, $childArray)) {
