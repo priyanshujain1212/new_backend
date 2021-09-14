@@ -15,6 +15,7 @@ return [
     'delivery_boys'           => 'Delivery Boys',
     'updates'                 => 'Updates',
     'settings'                => 'Settings',
+    'sections'                => 'Sections',
     'shop-owner-sales-report' => 'Shop Owner Sales Report',
     'admin-commission-report' => 'Admin Commission Report',
     // 'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',

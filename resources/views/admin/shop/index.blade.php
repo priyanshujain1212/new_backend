@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    
+
                     @can('shop_create')
                         <div class="card-header">
                             <a href="{{ route('admin.shop.create') }}" class="btn btn-icon icon-left btn-primary"><i
@@ -56,6 +56,7 @@
                                         <th>{{ __('levels.id') }}</th>
                                         <th>{{ __('levels.name') }}</th>
                                         <th>{{ __('levels.user') }}</th>
+                                        <th>{{ __('levels.section') }}</th>
                                         <th>{{ __('levels.location') }}</th>
                                         <th>{{ __('levels.status') }}</th>
                                         <th>{{ __('levels.actions') }}</th>

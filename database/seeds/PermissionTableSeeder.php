@@ -333,6 +333,10 @@ class PermissionTableSeeder extends Seeder
         $permissionArray[$i]['name']       = 'setting';
         $permissionArray[$i]['guard_name'] = 'web';
 
+        $i++;
+        $permissionArray[$i]['name']       = 'section';
+        $permissionArray[$i]['guard_name'] = 'web';
+
         Permission::insert($permissionArray);
     }
 }

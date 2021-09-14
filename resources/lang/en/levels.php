@@ -12,6 +12,7 @@ return [
     'product_image'                     => 'Product Image', // Product
 
     'area'                              => 'Area',
+    'section'                           => 'Section',
     'delivery_charge'                   => 'Delivery Charge',
     'latitude'                          => 'Latitude',
     'longitude'                         => 'Longitude',

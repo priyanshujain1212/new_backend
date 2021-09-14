@@ -16,6 +16,7 @@ use App\Models\Area;
 use App\Models\Location;
 use App\Models\Order;
 use App\Models\Product;
+use App\Models\Section;
 use App\Models\Shop;
 use App\Models\ShopProduct;
 use App\Models\ShopProductOption;
@@ -76,6 +77,7 @@ class ShopController extends BackendController
      */
     public function create()
     {
+        $this->data['sections']  = Section::where(['status' => Status::ACTIVE])->get();
         $this->data['locations'] = Location::where(['status' => Status::ACTIVE])->get();
         $this->data['areas']     = [];
         $location_id             = old('location_id');
@@ -109,6 +111,7 @@ class ShopController extends BackendController
         $user->assignRole($role->name);
         $shop                  = new Shop;
         $shop->user_id         = $user->id;
+        $shop->section_id      = $request->section_id;
         $shop->location_id     = $request->location_id;
         $shop->area_id         = $request->area_id;
         $shop->name            = $request->name;
@@ -150,6 +153,7 @@ class ShopController extends BackendController
     {
         $shop                  = new Shop;
         $shop->user_id         = auth()->id();
+        $shop->section_id      = $request->section_id;
         $shop->location_id     = $request->location_id;
         $shop->area_id         = $request->area_id;
         $shop->name            = $request->name;
@@ -173,6 +177,7 @@ class ShopController extends BackendController
     public function shopedit($id)
     {
         $this->data['shop']      = Shop::shopowner()->findOrFail($id);
+        $this->data['sections']  = Section::where(['status' => Status::ACTIVE])->get();
         $this->data['locations'] = Location::where(['status' => Status::ACTIVE])->get();
         $this->data['areas']     = [];
 
@@ -189,6 +194,7 @@ class ShopController extends BackendController
         $shop = Shop::shopowner()->findOrFail($id);
 
         $shop->user_id         = auth()->id();
+        $shop->section_id      = $request->section_id;
         $shop->location_id     = $request->location_id;
         $shop->area_id         = $request->area_id;
         $shop->name            = $request->name;
@@ -218,8 +224,10 @@ class ShopController extends BackendController
     public function edit($id)
     {
         $this->data['shop']      = Shop::shopowner()->findOrFail($id);
+        $this->data['sections']  = Section::where(['status' => Status::ACTIVE])->get();
         $this->data['locations'] = Location::where(['status' => Status::ACTIVE])->get();
         $this->data['areas']     = [];
+        $section_id              = old('section_id', $this->data['shop']->section_id);
         $location_id             = old('location_id', $this->data['shop']->location_id);
         if ($location_id) {
             $this->data['areas'] = Area::where([
@@ -264,6 +272,7 @@ class ShopController extends BackendController
                 $user->save();
                 $role = Role::find(3);
                 $user->assignRole($role->name);
+                $shop->section_id      = $request->section_id;
                 $shop->location_id     = $request->location_id;
                 $shop->area_id         = $request->area_id;
                 $shop->name            = $request->name;
@@ -363,6 +372,8 @@ class ShopController extends BackendController
                 return $retAction;
             })->editColumn('user_id', function ($shop) {
                 return Str::limit($shop->user->name ?? null, 20);
+            })->editColumn('section_id', function ($shop) {
+                return Str::limit($shop->section->name ?? null, 20);
             })->editColumn('location_id', function ($shop) {
                 return Str::limit($shop->location->name ?? null, 20);
             })->editColumn('status', function ($shop) {

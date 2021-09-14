@@ -144,6 +144,9 @@
                                     <p><b>{{ __('Closing Time') }}: </b> {{ date('h:i A', strtotime($shop->closing_time)) }}</p>
                                 </div>
                                 <div class="single-full-profile">
+                                    <p><b>{{ __('Shop Category') }}: </b> {{ $shop->section->name }}</p>
+                                </div>
+                                <div class="single-full-profile">
                                     <p><b>{{ __('Address') }}: </b> {{ $shop->address}}</p>
                                 </div>
                                 <div class="single-full-profile">

@@ -152,6 +152,26 @@ Breadcrumbs::for ('request-products/edit', function ($trail) {
 });
 /* Product breadcrumbs ends */
 
+/* Section breadcrumbs */
+// Dashboard / section
+Breadcrumbs::for ('sections', function ($trail) {
+    $trail->parent('dashboard');
+    $trail->push(trans('validation.attributes.sections'), route('admin.section.index'));
+});
+
+// Dashboard / sections / Add
+Breadcrumbs::for ('sections/add', function ($trail) {
+    $trail->parent('sections');
+    $trail->push(trans('validation.attributes.add'));
+});
+
+// Dashboard / sections / Edit
+Breadcrumbs::for ('sections/edit', function ($trail) {
+    $trail->parent('sections');
+    $trail->push(trans('validation.attributes.edit'));
+});
+/* Section breadcrumbs ends */
+
 // Dashboard / Shop
 Breadcrumbs::for ('shops', function ($trail) {
     $trail->parent('dashboard');

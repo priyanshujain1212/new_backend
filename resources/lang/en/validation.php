@@ -159,6 +159,8 @@ return [
         'title'                   => 'Title',
         'sort_order'              => 'Sort Order',
         'location_id'             => 'Location',
+        'section_id'              => 'Section',
+        'sections'                => 'Sections',
         'status'                  => 'Status',
         'shop'                    => 'Shop',
         'add'                     => 'Add',

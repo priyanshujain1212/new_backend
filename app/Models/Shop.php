@@ -64,6 +64,11 @@ class Shop extends BaseModel implements HasMedia
         return $this->belongsTo(Area::class);
     }
 
+    public function section()
+    {
+        return $this->belongsTo(Section::class);
+    }
+
     public function getImagesAttribute()
     {
         if (!empty($this->getFirstMediaUrl('shops'))) {

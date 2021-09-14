@@ -143,6 +143,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'installed', 'backen
 
     Route::get('get-order-history', 'DeliveryBoyController@history')->name('delivery-boys.get-order-history');
 
+    Route::resource('section', 'SectionController');
+    Route::get('get-section', 'SectionController@getSection')->name('section.get-section');
+
     Route::resource('shop', 'ShopController');
 
     Route::get('order-notification', 'OrderNotificationController@index')->name('order-notification.index');
@@ -164,7 +167,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'installed', 'backen
 
     // Route::post('shop/{shop}/products/attach', 'ShopController@productAttach')->name('shop.product.attach');
 
-   
+
 
 
     Route::post('shopstore', 'ShopController@shopstore')->name('shop.shopstore');

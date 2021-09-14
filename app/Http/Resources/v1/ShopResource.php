@@ -21,6 +21,7 @@ class ShopResource extends JsonResource
             "user_id"         => $this->user_id,
             "location_id"     => $this->location_id,
             "area_id"         => $this->area_id,
+            "section_id"      => $this->section_id,
             "description"     => strip_tags($this->description),
             "delivery_charge" => $this->delivery_charge,
             "lat"             => $this->lat,

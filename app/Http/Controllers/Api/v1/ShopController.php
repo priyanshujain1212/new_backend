@@ -57,6 +57,7 @@ class ShopController extends Controller
 
             $shop                  = new Shop;
             $shop->user_id         = auth()->user()->id;
+            $shop->section_id      = $request->section_id;
             $shop->location_id     = $request->location_id;
             $shop->area_id         = $request->area_id;
             $shop->name            = $request->name;
@@ -117,6 +118,7 @@ class ShopController extends Controller
             }
 
             $shop->user_id         = auth()->user()->id;
+            $shop->section_id      = $request->section_id;
             $shop->location_id     = $request->location_id;
             $shop->area_id         = $request->area_id;
             $shop->name            = $request->name;

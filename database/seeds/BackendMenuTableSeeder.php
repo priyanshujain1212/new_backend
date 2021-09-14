@@ -14,9 +14,9 @@ class BackendMenuTableSeeder extends Seeder
     {
         $parent = [
             'account' 	=> 11,
-            'hrm' 		=> 16,
-            'report'    => 21,
-            'frontend' 	=> 26,
+            'hrm' 		=> 17,
+            'report'    => 22,
+            'frontend' 	=> 27,
         ];
 
         $menus = [
@@ -66,6 +66,14 @@ class BackendMenuTableSeeder extends Seeder
                 'icon'      => 'fas fa-glass-whiskey',
                 'parent_id' => 0,
                 'priority'  => 455,
+                'status'    => 1,
+            ],
+            [
+                'name'      => 'Sections',
+                'link'      => 'section',
+                'icon'      => 'fas fa-code-branch',
+                'parent_id' => 0,
+                'priority'  => 510,
                 'status'    => 1,
             ],
             [

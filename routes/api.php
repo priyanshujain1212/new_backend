@@ -28,6 +28,8 @@ Route::group(['prefix' => 'v1'], function () {
     Route::get('locations/{id}/areas', 'Api\v1\LocationController@area'); //done
     Route::get('areas', 'Api\v1\AreaController@index'); //done
 
+    Route::get('sections', 'Api\v1\SectionController@index');
+
     Route::get('request-product', 'Api\v1\RequestProductController@index'); //done
     Route::post('request-product', 'Api\v1\RequestProductController@store'); //done
     Route::put('request-product/{id}', 'Api\v1\RequestProductController@update'); //done

@@ -161,6 +161,22 @@
                                 @enderror
                             </div>
                             <div class="form-group">
+                                <label for="section">{{ __('Shop Category') }}</label> <span class="text-danger">*</span>
+                                <select name="section_id" id="section" class="select2 form-control form-control-sm @error('section_id') is-invalid red-border @enderror" data-url="{{ route('admin.section.get-section') }}" >
+                                    <option value="">{{ __('Select Shop Category') }}</option>
+                                    @if(!blank($sections))
+                                        @foreach($sections as $section)
+                                            <option value="{{ $section->id }}" {{ (old('section_id') == $section->id) ? 'selected' : '' }}>{{ $section->name }}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                                @error('section_id')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
                                 <label>{{ __('levels.description') }}</label>
                                 <textarea name="description"
                                     class="form-control small-textarea-height @error('description') is-invalid @enderror"
